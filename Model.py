@@ -8,12 +8,16 @@ from sklearn.metrics import accuracy_score, roc_auc_score, classification_report
 import joblib
 
 # Cargar los datos
+
 ruta1 = 'c:/Users/Joselyn/Trabajo_Final/Riesgo_de_credito.xlsx'
+
 
 df = pd.read_excel(ruta1)
 
 # 1. Cargar datos de nuevos clientes
+
 Cartera_actual_vivela = pd.read_excel('c:/Users/Joselyn/Trabajo_Final/cartera_actual_Vivela.xlsx')
+
 
 print(df.columns)
 
