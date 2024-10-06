@@ -8,12 +8,12 @@ from sklearn.metrics import accuracy_score, roc_auc_score, classification_report
 import joblib
 
 # Cargar los datos
-ruta1 = 'c:/Users/Joselyn/Desktop/PERSONALES/CURSO CERTUS/DataOps/Trabajo Final/Riesgo_de_credito.xlsx'
+ruta1 = 'c:/Users/Joselyn/Desktop/PERSONALES/CURSO CERTUS/DataOps/Trabajo_Final/Riesgo_de_credito.xlsx'
 
 df = pd.read_excel(ruta1)
 
 # 1. Cargar datos de nuevos clientes
-Cartera_actual_vivela = pd.read_excel('c:/Users/Joselyn/Desktop/PERSONALES/CURSO CERTUS/DataOps/Trabajo Final/cartera_actual_Vivela.xlsx')
+Cartera_actual_vivela = pd.read_excel('c:/Users/Joselyn/Desktop/PERSONALES/CURSO CERTUS/DataOps/Trabajo_Final/cartera_actual_Vivela.xlsx')
 
 print(df.columns)
 
