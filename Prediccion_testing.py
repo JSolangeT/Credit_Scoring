@@ -6,7 +6,7 @@ import joblib
 model = joblib.load('modelo_credito.pkl')
 
 # 1. Cargar datos de nuevos clientes
-nuevos_clientes_df = pd.read_excel('c:/Users/Joselyn/Desktop/PERSONALES/CURSO CERTUS/DataOps/Trabajo Final/nuevos_clientes_prueba.xlsx')
+nuevos_clientes_df = pd.read_excel('c:/Users/Joselyn/Trabajo_Final/nuevos_clientes_prueba.xlsx')
 
 # 2. Preprocesamiento
 nuevos_clientes_df = pd.get_dummies(nuevos_clientes_df, columns=['genero', 'estado_civil', 'ocupacion'], drop_first=True)

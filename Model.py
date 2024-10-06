@@ -8,12 +8,12 @@ from sklearn.metrics import accuracy_score, roc_auc_score, classification_report
 import joblib
 
 # Cargar los datos
-ruta1 = 'c:/Users/Joselyn/Desktop/PERSONALES/CURSO CERTUS/DataOps/Trabajo Final/Riesgo_de_credito.xlsx'
+ruta1 = 'c:/Users/Joselyn/Trabajo_Final/Riesgo_de_credito.xlsx'
 
 df = pd.read_excel(ruta1)
 
 # 1. Cargar datos de nuevos clientes
-Cartera_actual_vivela = pd.read_excel('c:/Users/Joselyn/Desktop/PERSONALES/CURSO CERTUS/DataOps/Trabajo Final/cartera_actual_Vivela.xlsx')
+Cartera_actual_vivela = pd.read_excel('c:/Users/Joselyn/Trabajo_Final/cartera_actual_Vivela.xlsx')
 
 print(df.columns)
 
@@ -21,7 +21,7 @@ print(df.columns)
 df = pd.get_dummies(df, columns=['genero', 'estado_civil', 'ocupacion'], drop_first=True)
 
 # Dividir los datos en características (X) y variable objetivo (y)
-X = df.drop(columns=['id_cliente', 'incumplimiento_pago'])
+X = df.drop(columns=['id_cliente', 'incumplimiento_pago','edad'])
 y = df['incumplimiento_pago']
 
 # Dividir en entrenamiento y prueba
